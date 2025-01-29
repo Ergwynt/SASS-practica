@@ -1,0 +1,64 @@
+@import 'colors';
+@import 'mixins';
+
+body {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    .card-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px;
+        .card {
+            width: calc(50% - 20px);
+            height: 300px;
+            display: flex;
+            background-color: $dark;
+            margin: 5px;
+            border: {
+                color: $dark;
+                radius: 5px;
+                style: solid;
+                width: 1px;
+            }
+            #img1 {
+                width: 40%;
+                @include imgs(100%, 100%, '../img/volcan1.jpeg');
+            }
+            #img2 {
+                width: 40%;
+                @include imgs(100%, 100%, '../img/volcan2.jpeg');
+            }
+            #img3 {
+                width: 40%;
+                @include imgs(100%, 100%, '../img/volcan3.jpeg');
+            }
+            #img4 {
+                width: 40%;
+                @include imgs(100%, 100%, '../img/volcan4.jpeg');
+            }
+            .content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+    
+                .name {
+                    color: $secondary;
+                }
+    
+                .date {
+                    color: $info;
+                }
+    
+                .body {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,73 @@
+@import 'colors';
+@import 'mixins';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark;
+    color: $secondary;
+
+    padding: {
+        left: 20px;
+        right: 20px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            gap: 15px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $secondary;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        
+        nav {
+            flex-direction: column;
+            width: 100%;
+
+            .logo {
+                @include imgs(60px, 40px, '../img/sass.png');
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+  

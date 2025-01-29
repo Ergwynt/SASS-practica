@@ -1,0 +1,10 @@
+@mixin imgs($width, $height, $bg-image) {
+    width: $width;
+    height: $height;
+    background: {
+        image: url($bg-image);
+        size: cover;
+        position: center;
+    }
+}
+  
